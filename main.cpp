@@ -2,15 +2,15 @@
 	ShiftingBricks
  */
 
-#include <sifteo.h>
+#include "game.h"
 
 static Metadata M = Metadata()
     .title("ShiftingBricks")
-    .package("com.sifteo.sdk.text", "1.0")
+    .package("sb", "0.1")
     .icon(Icon)
     .cubeRange(NUM_CUBES);
 
-void main {
+void main() {
 
 	static Game game;
 	
