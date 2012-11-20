@@ -15,7 +15,6 @@ static Metadata M = Metadata()
 
 void main() {
 
-	static Game game;
 	VideoBuffer vid;	
 	vid.initMode(BG0);
 	vid.attach(0);

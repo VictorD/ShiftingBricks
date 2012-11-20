@@ -13,9 +13,40 @@ using namespace Sifteo;
 
 /*		Classes		*/
 
-class Game{};
+class Game{
 
-class Player{};
+public:
+	Game();
+	
+	void title();
+	void init();
+	void run();
+	void addBlock();
+	void removeBlock();
+	void draw();
+	void cleanup();
+	
+};
+
+class GameCube{
+
+public:
+	GameCube(CubeID id);
+	
+	void init();
+	void draw();
+	void getNewPattern();
+
+};
+
+class Player{
+
+public:
+	Player();
+	
+	void spawn();
+	void draw();
+};
 
 class MapBlock{};
 
