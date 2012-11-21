@@ -1,9 +1,7 @@
 -- Metadata
-
 IconAssets = group{quality=9.95}
 Icon = image{"icon.png"}
 
-Title = image{"title.png", width=144, height=64}
-
-GameAssets = group{}
+GameAssets = group{quality=9.90}
+Title = image{"title.png", width=144, height=144}
 Background = image{"background.png", quality=10}

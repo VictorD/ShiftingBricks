@@ -14,14 +14,15 @@ static Metadata M = Metadata()
     .cubeRange(NUM_CUBES);
 
 void main() {
-
+	
 	VideoBuffer vid;	
 	vid.initMode(BG0);
 	vid.attach(0);
 	vid.bg0.image(vec(0,0), Background);
+	// static Game game; currently gives error on simu
 	
 	while(1){
-		System::paint();
+		game.title();
 		/*
 		Run all Game functions
 		1. titlescreen / init

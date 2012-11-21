@@ -7,10 +7,20 @@
 
 Game::Game()
 {
-/*	Things our game holds	*/
+	int x;
 }
 
-void Game::title(){}
+void Game::title(){
+
+	const float titleTime = 5.0f;
+	SystemTime titleDeadline = SystemTime::now() + titleTime;
+	vid.initMode(BG0);
+	
+	while(SystemTime::now() < titleDeadline){
+		vid.bg0.image(vec(0,0), Title);
+		System::paint();
+	}
+}
 
 void Game::init(){}
 
