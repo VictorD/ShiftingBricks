@@ -2,31 +2,17 @@
 	ShiftingBricks Header File
 */
 
-#include "sifteo.h"
+#include <sifteo.h>
 #include "assets.gen.h"
 
 using namespace Sifteo;
 
-#define NUM_CUBES	3	// Flexible way of setting amount of cubes
+#define NUM_CUBES	3	// For cubeRange
 #define BLOCK_FORMS	1	// For testing purposes only one type of block
 
+extern AssetSlot MainSlot;
 
 /*		Classes		*/
-
-class Game{
-
-public:
-	Game();
-	
-	void title();
-	void init();
-	void run();
-	void addBlock();
-	void removeBlock();
-	void draw();
-	void cleanup();
-	
-};
 
 class GameCube{
 
@@ -36,7 +22,8 @@ public:
 	void init();
 	void draw();
 	void getNewPattern();
-
+	
+	VideoBuffer vid;
 };
 
 class Player{
@@ -54,3 +41,28 @@ class BlockFactory{};
 
 class SolidObject{};
 
+class Game{
+
+public:
+	Game();
+	
+	void title();
+	void init();
+	void run();
+	void addBlock();
+	void removeBlock();
+	void draw();
+	void cleanup();
+	
+private:
+	GameCube cube_0, cube_1, cube_2;
+	GameCube &getCube(unsigned i){
+		switch(i){
+		default:
+		case 0: return cube_0;
+		case 1: return cube_1;
+		case 2: return cube_2;
+		};
+	}
+	
+};

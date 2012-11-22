@@ -7,17 +7,13 @@
 
 /*		Shamelessly stolen from example/membrane to init cubes	 */
 
-GameCube::GameCube(CubeID cube):
+GameCube::GameCube(CubeID cube)
 		/*	things each of our cubes will hold	*/
 
 {
-vid.attach(cube); // Assign a VideoBuffer to each cube
+	vid.attach(cube);
 }
 
 void GameCube::init(){}
-
-
 void GameCube::draw(){}
-
-
 void GameCube::getNewPattern(){}

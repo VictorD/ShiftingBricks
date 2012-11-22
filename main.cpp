@@ -4,7 +4,7 @@
 
 #include "game.h"
 
-static AssetSlot MainSlot = AssetSlot::allocate()
+AssetSlot MainSlot = AssetSlot::allocate()
     .bootstrap(GameAssets);
 	
 static Metadata M = Metadata()
@@ -15,14 +15,10 @@ static Metadata M = Metadata()
 
 void main() {
 	
-	VideoBuffer vid;	
-	vid.initMode(BG0);
-	vid.attach(0);
-	vid.bg0.image(vec(0,0), Background);
-	// static Game game; currently gives error on simu
+	static Game game;
 	
 	while(1){
-		game.title();
+		//game.title();
 		/*
 		Run all Game functions
 		1. titlescreen / init

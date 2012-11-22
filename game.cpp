@@ -6,9 +6,8 @@
 #include "game.h"
 
 Game::Game()
-{
-	int x;
-}
+	: cube_0(0), cube_1(1), cube_2(2)
+{}
 
 void Game::title(){
 
