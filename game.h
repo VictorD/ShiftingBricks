@@ -2,6 +2,9 @@
 	ShiftingBricks Header File
 */
 
+#ifndef GAME_H
+#define GAME_H
+
 #include <sifteo.h>
 #include "assets.gen.h"
 
@@ -10,7 +13,6 @@ using namespace Sifteo;
 #define NUM_CUBES	3	// For cubeRange
 #define BLOCK_FORMS	1	// For testing purposes only one type of block
 
-extern AssetSlot MainSlot;
 
 /*		Classes		*/
 
@@ -66,3 +68,5 @@ private:
 	}
 	
 };
+
+#endif

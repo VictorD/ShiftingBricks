@@ -18,7 +18,9 @@ void main() {
 	static Game game;
 	
 	while(1){
-		//game.title();
+		game.title();
+		game.init();
+		while(1){System::paint();}
 		/*
 		Run all Game functions
 		1. titlescreen / init

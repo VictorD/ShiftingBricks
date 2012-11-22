@@ -8,12 +8,13 @@
 /*		Shamelessly stolen from example/membrane to init cubes	 */
 
 GameCube::GameCube(CubeID cube)
-		/*	things each of our cubes will hold	*/
-
 {
 	vid.attach(cube);
 }
 
-void GameCube::init(){}
+void GameCube::init(){
+	vid.initMode(BG0);
+	vid.bg0.image(vec(0,0), Background);
+}
 void GameCube::draw(){}
 void GameCube::getNewPattern(){}

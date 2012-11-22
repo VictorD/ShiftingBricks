@@ -11,17 +11,27 @@ Game::Game()
 
 void Game::title(){
 
-	const float titleTime = 5.0f;
+	const float titleTime = 3.0f;
 	SystemTime titleDeadline = SystemTime::now() + titleTime;
-	vid.initMode(BG0);
+	
+	for(CubeID i = 0; i < NUM_CUBES; i++){
+			getCube(i).vid.initMode(BG0);
+		}
 	
 	while(SystemTime::now() < titleDeadline){
-		vid.bg0.image(vec(0,0), Title);
+		for(CubeID i = 0; i < NUM_CUBES; i++){
+			getCube(i).vid.bg0.image(vec(0,0), Title);
+		}
 		System::paint();
 	}
 }
 
-void Game::init(){}
+void Game::init(){
+
+	for(unsigned i = 0; i < NUM_CUBES; i++){
+		getCube(i).init();
+	}
+}
 
 void Game::run(){}
 
