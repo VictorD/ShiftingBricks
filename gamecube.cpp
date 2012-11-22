@@ -13,7 +13,9 @@ GameCube::GameCube(CubeID cube)
 }
 
 void GameCube::init(){
-	vid.initMode(BG0);
+	vid.initMode(BG0_SPR_BG1);
+	vid.bg1.setMask(BG1Mask::filled(vec(0,11), Grass.tileSize()));
+	vid.bg1.image(vec(0,11), Grass);
 	vid.bg0.image(vec(0,0), Background);
 }
 void GameCube::draw(){}
