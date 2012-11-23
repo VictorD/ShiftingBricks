@@ -49,10 +49,13 @@ void Game::addBlock(){}
 void Game::removeBlock(){}
 
 void Game::draw(){
+    
     for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).draw();
+        System::paint();
+        System::finish();
 	}
-    System::paint();
+    
 }
 
 void Game::cleanup(){}
