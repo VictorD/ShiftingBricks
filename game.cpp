@@ -27,9 +27,9 @@ void Game::title(){
 }
 
 void Game::init(){  
-    getCube(0).solid = SolidObject(vec(2,2), vec(0,0), true, 4,4);
-    getCube(1).solid = SolidObject(vec(5,5), vec(0,0), true, 4,4);
-    getCube(2).solid = SolidObject(vec(1,5), vec(0,0), true, 4,4);
+    getCube(0).solid = SolidObject(vec(2,2), vec(0,0), true, 4,3);
+    getCube(1).solid = SolidObject(vec(5,5), vec(0,0), true, 7,4);
+    getCube(2).solid = SolidObject(vec(1,5), vec(0,0), true, 11,5);
     
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();

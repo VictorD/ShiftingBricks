@@ -14,7 +14,7 @@ GameCube::GameCube(CubeID cube)
 
 void GameCube::init(){
     SolidObject s = solid;
-    solidMask = solidMask | BG1Mask::filled(vec(s.getX(),s.getY()), vec(s.getWidth(), s.getHeight()));
+    solidMask = BG1Mask::empty() | BG1Mask::filled(vec(s.getX(),s.getY()), vec(s.getWidth(), s.getHeight()));
 
     vid.initMode(BG0_SPR_BG1);
 	vid.bg0.image(vec(0,0), Background);    
