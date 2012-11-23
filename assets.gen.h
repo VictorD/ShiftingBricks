@@ -11,3 +11,4 @@ extern const Sifteo::AssetImage Icon;
 extern Sifteo::AssetGroup GameAssets;
 extern const Sifteo::AssetImage Title;
 extern const Sifteo::AssetImage Background;
+extern const Sifteo::AssetImage Grass;

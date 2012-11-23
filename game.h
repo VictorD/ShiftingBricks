@@ -7,6 +7,7 @@
 
 #include <sifteo.h>
 #include "assets.gen.h"
+#include "solidobject.h"
 
 using namespace Sifteo;
 
@@ -41,8 +42,6 @@ class MapBlock{};
 
 class BlockFactory{};
 
-class SolidObject{};
-
 class Game{
 
 public:
@@ -68,5 +67,6 @@ private:
 	}
 	
 };
+
 
 #endif

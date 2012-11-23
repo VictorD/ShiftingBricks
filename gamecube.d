@@ -1,117 +1,119 @@
 gamecube.o: gamecube.cpp \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/syscall.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/types.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/audio.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/events.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/vram.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/asset.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/elf.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/array.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/memory.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/macros.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/group.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/limits.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/math.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/loader.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/audio.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/image.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/audio.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/cube.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/event.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/filesystem.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/metadata.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/motion.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/string.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/system.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/time.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/color.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/sprite.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/framebuffer.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0rom.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg1.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg2.h \
-  G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/tilebuffer.h \
-  game.h assets.gen.h
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/syscall.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/types.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/audio.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/events.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/vram.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/asset.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/elf.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/array.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/memory.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/macros.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/group.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/limits.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/math.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/loader.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/audio.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/image.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/audio.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/cube.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/event.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/filesystem.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/metadata.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/motion.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/string.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/system.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/time.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/color.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/sprite.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/framebuffer.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0rom.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg1.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg2.h \
+  C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/tilebuffer.h \
+  game.h assets.gen.h solidobject.h
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/syscall.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/syscall.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/types.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/types.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/audio.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/audio.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/events.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/events.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/vram.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/vram.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/asset.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/asset.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/elf.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/abi/elf.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/array.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/array.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/memory.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/memory.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/macros.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/macros.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/group.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/group.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/limits.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/limits.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/math.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/math.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/loader.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/loader.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/audio.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/audio.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/image.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/asset/image.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/audio.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/audio.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/cube.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/cube.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/event.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/event.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/filesystem.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/filesystem.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/metadata.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/metadata.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/motion.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/motion.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/string.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/string.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/system.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/system.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/time.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/time.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/color.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/color.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/sprite.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/sprite.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/framebuffer.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/framebuffer.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0rom.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0rom.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg0.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg1.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg1.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg2.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/bg2.h:
 
-G:\Skola\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/tilebuffer.h:
+C:\Users\Lightweight\GoogleDrive\Datateknik\M7012E\sifteo-sdk-windows-v0.9.8-203-gc80efac\/include\sifteo/video/tilebuffer.h:
 
 game.h:
 
 assets.gen.h:
+
+solidobject.h:
