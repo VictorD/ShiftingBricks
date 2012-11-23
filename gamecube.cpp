@@ -14,11 +14,24 @@ GameCube::GameCube(CubeID cube)
 
 void GameCube::init(){
 	vid.initMode(BG0_SPR_BG1);
-	vid.bg1.setMask(BG1Mask::filled(vec(0,11), vec(4,4)) | BG1Mask::filled(vec(6,5), vec(4,4)) | BG1Mask::filled(vec(2,2), vec(4,4)));
-	vid.bg1.image(vec(0,11), Grass);
-    vid.bg1.image(vec(2,2), Grass);
-    vid.bg1.image(vec(6,5), Grass);
 	vid.bg0.image(vec(0,0), Background);
 }
-void GameCube::draw(){}
+void GameCube::draw(){
+    vid.initMode(BG0_SPR_BG1);
+    vid.bg0.image(vec(0,0), Background);
+    
+    BG1Mask bitmask;
+    for(unsigned i = 0; i < 1; i++) {
+        SolidObject s = solid; //solids[i];
+        bitmask = bitmask | BG1Mask::filled(vec(s.getX(),s.getY()), vec(s.getWidth(), s.getHeight()));
+    }
+
+    vid.bg1.setMask(bitmask);
+    
+    for(unsigned i = 0; i < 1; i++) {
+        SolidObject s = solid;//solids[i];
+        vid.bg1.image(vec(s.getX(),s.getY()), Grass);
+    }
+}
+
 void GameCube::getNewPattern(){}

@@ -27,6 +27,7 @@ public:
 	void getNewPattern();
 	
 	VideoBuffer vid;
+    SolidObject solid;
 };
 
 class Player{
