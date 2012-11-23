@@ -27,13 +27,14 @@ void Game::title(){
 }
 
 void Game::init(){  
-	for(unsigned i = 0; i < NUM_CUBES; i++){
-		getCube(i).init();
-	}
-    
     getCube(0).solid = SolidObject(vec(2,2), vec(0,0), true, 4,4);
     getCube(1).solid = SolidObject(vec(5,5), vec(0,0), true, 4,4);
     getCube(2).solid = SolidObject(vec(1,5), vec(0,0), true, 4,4);
+    
+	for(unsigned i = 0; i < NUM_CUBES; i++){
+		getCube(i).init();
+	}
+
    /* 
     getCube(1).solids[0] = SolidObject(vec(2,2), vec(0,0), true, 2,2);
     getCube(1).solids[1] = SolidObject(vec(4,3), vec(0,0), true, 2,2);
@@ -52,10 +53,8 @@ void Game::draw(){
     
     for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).draw();
-        System::paint();
-        System::finish();
 	}
-    
+    System::paint();
 }
 
 void Game::cleanup(){}

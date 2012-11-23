@@ -28,6 +28,7 @@ public:
 	
 	VideoBuffer vid;
     SolidObject solid;
+    BG1Mask solidMask;
 };
 
 class Player{
