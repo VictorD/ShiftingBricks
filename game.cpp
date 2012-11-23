@@ -4,6 +4,7 @@
 
 #include <sifteo.h>
 #include "game.h"
+#include "mapblock.h"
 
 Game::Game()
 	: cube_0(0), cube_1(1), cube_2(2)
@@ -26,21 +27,26 @@ void Game::title(){
 	}
 }
 
+
 void Game::init(){  
-    getCube(0).solid = SolidObject(vec(2,2), vec(0,0), true, 4,3);
-    getCube(1).solid = SolidObject(vec(5,5), vec(0,0), true, 7,4);
-    getCube(2).solid = SolidObject(vec(1,5), vec(0,0), true, 11,5);
+    getCube(0).scene.addObject(SolidObject(vec(0,11), vec(0,0), true, 4,4));
+    getCube(0).scene.addObject(SolidObject(vec(11,2), vec(0,0), true, 4,3));
+    getCube(0).scene.addObject(SolidObject(vec(7,2), vec(0,0), false, 4,3));
+    
+    getCube(1).scene.addObject(SolidObject(vec(2,5), vec(0,0), false, 4,5));
+    getCube(1).scene.addObject(SolidObject(vec(8,2), vec(0,0), true, 4,4));
+    
+    getCube(2).scene.addObject(SolidObject(vec(1,5), vec(0,0), true, 11,5));
     
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();
 	}
+}
 
-   /* 
-    getCube(1).solids[0] = SolidObject(vec(2,2), vec(0,0), true, 2,2);
-    getCube(1).solids[1] = SolidObject(vec(4,3), vec(0,0), true, 2,2);
-    
-    getCube(2).solids[0] = SolidObject(vec(2,2), vec(0,0), true, 1,1);
-    getCube(2).solids[1] = SolidObject(vec(4,3), vec(0,0), true, 1,1);*/
+void Game::doPhysics() {
+    for(unsigned i = 0; i < NUM_CUBES; i++){
+		getCube(i).doPhysics();
+	}
 }
 
 void Game::run(){}

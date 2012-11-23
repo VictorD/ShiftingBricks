@@ -20,7 +20,18 @@ void main() {
 	while(1){
 		game.title();
 		game.init();
-		while(1){ game.draw(); }
+        
+        int ticks = 0;
+		while(1){ 
+            game.draw(); 
+            
+            if (ticks % 2 == 0)
+                game.doPhysics(); 
+            
+            ticks++;
+            if (ticks > 100)
+                ticks = 0;
+        }
 		/*
 		Run all Game functions
 		1. titlescreen / init

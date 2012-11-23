@@ -8,6 +8,7 @@
 #include <sifteo.h>
 #include "assets.gen.h"
 #include "solidobject.h"
+#include "mapblock.h"
 
 using namespace Sifteo;
 
@@ -24,11 +25,11 @@ public:
 	
 	void init();
 	void draw();
+    void doPhysics();
 	void getNewPattern();
 	
 	VideoBuffer vid;
-    SolidObject solid;
-    BG1Mask solidMask;
+    MapBlock scene;
 };
 
 class Player{
@@ -40,12 +41,9 @@ public:
 	void draw();
 };
 
-class MapBlock{};
-
 class BlockFactory{};
 
 class Game{
-
 public:
 	Game();
 	
@@ -55,6 +53,7 @@ public:
 	void addBlock();
 	void removeBlock();
 	void draw();
+    void doPhysics();
 	void cleanup();
 	
 private:
