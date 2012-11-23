@@ -20,7 +20,7 @@ void main() {
 	while(1){
 		game.title();
 		game.init();
-		while(1){System::paint();}
+		while(1){ game.draw(); }
 		/*
 		Run all Game functions
 		1. titlescreen / init

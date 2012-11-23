@@ -27,7 +27,7 @@ void Game::title(){
 }
 
 void Game::init(){
-
+    
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();
 	}
@@ -39,6 +39,11 @@ void Game::addBlock(){}
 
 void Game::removeBlock(){}
 
-void Game::draw(){}
+void Game::draw(){
+    for(unsigned i = 0; i < NUM_CUBES; i++){
+		getCube(i).draw();
+	}
+    System::paint();
+}
 
 void Game::cleanup(){}
