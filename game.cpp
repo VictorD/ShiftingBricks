@@ -49,7 +49,22 @@ void Game::doPhysics() {
 	}
 }
 
-void Game::run(){}
+void Game::run(){
+
+	TimeStep ts;
+	
+	while(1){
+		ts.next();
+		
+		//Run animation methods here
+		
+		//Run physics with fixed timestep(To be decided)
+		doPhysics();
+		
+		draw();
+		System::paint();
+	}
+}
 
 void Game::addBlock(){}
 
