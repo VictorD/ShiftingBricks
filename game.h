@@ -9,6 +9,7 @@
 #include "assets.gen.h"
 #include "solidobject.h"
 #include "mapblock.h"
+#include "gamecube.h"
 
 using namespace Sifteo;
 
@@ -16,22 +17,7 @@ using namespace Sifteo;
 #define BLOCK_FORMS	1	// For testing purposes only one type of block
 
 
-/*		Classes		*/
-
-class GameCube{
-
-public:
-	GameCube(CubeID id);
-	
-	void init();
-	void draw();
-	void animate();
-    void doPhysics();
-	void getNewPattern();
-	
-	VideoBuffer vid;
-    MapBlock scene;
-};
+/*		Game class		*/
 
 class BlockFactory{};
 

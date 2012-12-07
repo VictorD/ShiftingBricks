@@ -3,6 +3,7 @@
 
 #include <sifteo.h>
 #include <sifteo/array.h>
+#include "solidobject.h"
 
 class MapBlock {
     
