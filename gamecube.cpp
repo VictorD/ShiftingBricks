@@ -3,7 +3,7 @@
 */
 
 #include <sifteo.h>
-#include "game.h"
+#include "gamecube.h"
 
 /*		Shamelessly stolen from example/membrane to init cubes	 */
 
