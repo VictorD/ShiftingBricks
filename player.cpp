@@ -19,9 +19,9 @@ void Player::animate(float dt){
 }
 
 void Player::draw(){
-	if(animIndex < 4){animIndex = animIndex+1;}
+	if(animIndex < 70){animIndex++;}
 	else{animIndex = 0;}
 	const auto &sprite = onCube->vid.sprites[1];
-	sprite.setImage(Atest, animIndex);
-	sprite.move(10,20);
+	sprite.setImage(Atest, animIndex/10);
+	sprite.move(animIndex*2,30);
 }
