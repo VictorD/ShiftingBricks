@@ -44,6 +44,9 @@ void Game::init(){
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();
 	}
+	
+	plyr.init(&getCube(0));
+	
 }
 
 void Game::doPhysics() {
@@ -87,6 +90,8 @@ void Game::draw(){
     for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).draw();
 	}
+	
+	plyr.draw();
 }
 
 void Game::cleanup(){}
