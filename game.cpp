@@ -29,7 +29,8 @@ void Game::title(){
 
 
 void Game::init(){  
-    getCube(0).scene.addObject(SolidObject(vec(0,0), vec(0,0), true, 4,4));
+    getCube(0).scene.addObject(SolidObject(vec(0,3), vec(0,0), true, 4,2));
+    getCube(0).scene.addObject(SolidObject(vec(2,0), vec(0,0), true, 4,2));
     //getCube(0).scene.addObject(SolidObject(vec(11,6), vec(0,0), true, 4,3));
     
 //    getCube(0).scene.addObject(SolidObject(vec(7,2), vec(0,0), false, 4,3));

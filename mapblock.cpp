@@ -20,8 +20,8 @@ void MapBlock::draw(VideoBuffer* vid) {
     vid->bg1.setMask(solidMask);
 
     for(int i = 0; i < solids.count(); i++) {
-        SolidObject *s = start+i;
-        vid->bg1.image(vec(s->getX(),s->getY()), Grass);
+		SolidObject *s = start+i;
+		s->draw(vid);
     }  
 }
 
@@ -37,9 +37,9 @@ void MapBlock::doPhysics() {
                 continue;
                 
             SolidObject *s2 = start+j;
-            if (s2->testCollision(s1)) {
+            if (s1->isAffectedByGravity() && s1->testCollision(s2)) {
                 s1->collidesWith(s2);
-                LOG("collision\n");
+                LOG("collision detected\n");
             }
         }
     }  

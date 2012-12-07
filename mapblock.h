@@ -3,6 +3,7 @@
 
 #include <sifteo.h>
 #include <sifteo/array.h>
+#include "solidobject.h"
 
 class MapBlock {
     
@@ -10,15 +11,13 @@ class MapBlock {
         void addObject(SolidObject s) {
             solids.append(s);
         }
-        
-        
+
         void init();
         void doPhysics();
         void draw(VideoBuffer* vid);
         
     private:
         int current = 0;
-
         Array<SolidObject, 8> solids;
 };
 
