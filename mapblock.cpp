@@ -1,4 +1,4 @@
-/*
+/*  
 	ShiftingBricks:	MapBlock class file
 */
 
@@ -6,6 +6,9 @@
 #include "game.h"
 #include "mapblock.h"
 
+/* 
+ * Draw the collidables that exist in this mapblock.
+ */ 
 void MapBlock::draw(VideoBuffer* vid) {
     BG1Mask solidMask = BG1Mask::empty();
     
@@ -25,9 +28,16 @@ void MapBlock::draw(VideoBuffer* vid) {
 void MapBlock::doPhysics() {
     SolidObject *start = solids.begin();
     for(int i = 0; i < solids.count(); i++) {
-        SolidObject *s = start+i;
-        if (s->isAffectedByGravity()) {                
-            s->move();
+        SolidObject *s1 = start+i;
+        s1->move();
+
+        // Test for collisions with other solids
+        for(int j = 0; j < solids.count(); j++) {
+            SolidObject *s2 = start+j;
+            if (s2->testCollision(s1)) {
+                s1->collidesWith(s2);
+                LOG("collision\n");
+            }
         }
     }  
 }
