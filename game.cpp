@@ -29,14 +29,16 @@ void Game::title(){
 
 
 void Game::init(){  
-    getCube(0).scene.addObject(SolidObject(vec(0,11), vec(0,0), true, 4,4));
-    getCube(0).scene.addObject(SolidObject(vec(11,2), vec(0,0), true, 4,3));
-    getCube(0).scene.addObject(SolidObject(vec(7,2), vec(0,0), false, 4,3));
+    getCube(0).scene.addObject(SolidObject(vec(0,0), vec(0,0), true, 4,4));
+    //getCube(0).scene.addObject(SolidObject(vec(11,6), vec(0,0), true, 4,3));
     
-    getCube(1).scene.addObject(SolidObject(vec(2,5), vec(0,0), false, 4,5));
-    getCube(1).scene.addObject(SolidObject(vec(8,2), vec(0,0), true, 4,4));
-    
-    getCube(2).scene.addObject(SolidObject(vec(1,5), vec(0,0), true, 11,5));
+//    getCube(0).scene.addObject(SolidObject(vec(7,2), vec(0,0), false, 4,3));
+    getCube(0).scene.addObject(SolidObject(vec(0,11), vec(0,0), false, 16,4));
+
+  //  getCube(1).scene.addObject(SolidObject(vec(2,5), vec(0,0), false, 4,5));
+  //  getCube(1).scene.addObject(SolidObject(vec(8,2), vec(0,0), true, 4,4));
+
+  //  getCube(2).scene.addObject(SolidObject(vec(1,5), vec(0,0), true, 11,5));
     
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();
