@@ -25,10 +25,9 @@ class SolidObject{
         void move(Int2 vel) {
             velocity = vec(velocity.x + vel.x , velocity.y + vel.y);
         }
-        
+
         void move() {
             int gravity =  hasGravity;
-            
             position = vec(position.x + velocity.x, position.y + velocity.y + gravity);
             
             if (vectorLengthSquared(velocity) > 0)

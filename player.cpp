@@ -3,6 +3,7 @@
 */
 
 #include <sifteo.h>
+#include "player.h"
 
 Player::Player()
 	: onCube(0), animIndex(0)

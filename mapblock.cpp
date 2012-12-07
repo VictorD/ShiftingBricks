@@ -33,6 +33,9 @@ void MapBlock::doPhysics() {
 
         // Test for collisions with other solids
         for(int j = 0; j < solids.count(); j++) {
+            if (j == i) // Don't test solid collision with itself.
+                continue;
+                
             SolidObject *s2 = start+j;
             if (s2->testCollision(s1)) {
                 s1->collidesWith(s2);
