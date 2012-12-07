@@ -25,20 +25,12 @@ public:
 	
 	void init();
 	void draw();
+	void animate();
     void doPhysics();
 	void getNewPattern();
 	
 	VideoBuffer vid;
     MapBlock scene;
-};
-
-class Player{
-
-public:
-	Player();
-	
-	void spawn();
-	void draw();
 };
 
 class BlockFactory{};
@@ -50,8 +42,9 @@ public:
 	void title();
 	void init();
 	void run();
-	void addBlock();
-	void removeBlock();
+	void animate(float td);
+	void attachCube();
+	void detachCube();
 	void draw();
     void doPhysics();
 	void cleanup();

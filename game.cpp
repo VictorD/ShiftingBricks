@@ -57,25 +57,33 @@ void Game::run(){
 		ts.next();
 		
 		//Run animation methods here
+		animate(ts.delta());
 		
 		//Run physics with fixed timestep(To be decided)
 		doPhysics();
 		
+		//Display on cubes
 		draw();
 		System::paint();
 	}
 }
 
-void Game::addBlock(){}
+void Game::attachCube(){}
 
-void Game::removeBlock(){}
+void Game::detachCube(){}
+
+void Game::animate(float td){
+	
+	for(unsigned i = 0; i < NUM_CUBES; i++){
+		getCube(i).animate();
+	}
+}
 
 void Game::draw(){
     
     for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).draw();
 	}
-    System::paint();
 }
 
 void Game::cleanup(){}
