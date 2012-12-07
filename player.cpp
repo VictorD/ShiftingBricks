@@ -12,6 +12,8 @@ Player::Player()
 void Player::init(GameCube *gc){
 	onCube = gc;
 
+    collisionBox = SolidObject(vec(10,20), vec(0,0), true, 2,2);
+    gc->scene.addObject(collisionBox);
 }
 
 void Player::animate(float dt){

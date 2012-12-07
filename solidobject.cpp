@@ -10,8 +10,8 @@ void SolidObject::draw(VideoBuffer *vid) {
 }
 
 void SolidObject::move() {
-    int gravity =  hasGravity;
-    position = vec(position.x + velocity.x, position.y + velocity.y + gravity);
+    position = vec(position.x + velocity.x, position.y + velocity.y + hasGravity);
+    boundingBox.move(position);
     
     if (vectorLengthSquared(velocity) > 0)
         LOG("new position: %d, %d\n", position.x, position.y);

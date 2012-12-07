@@ -22,6 +22,7 @@ public:
 	
 private:
 	GameCube *onCube;
+    SolidObject collisionBox;
 	unsigned animIndex;
 };
 
