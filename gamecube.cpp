@@ -14,7 +14,7 @@ GameCube::GameCube(CubeID cube)
 
 void GameCube::init(){
 	vid.initMode(BG0);
-    vid.bg0.image(vec(0,0), Background); 
+    vid.bg0.image(vec(0,0), Background);	
 }
 
 void GameCube::draw(){

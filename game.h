@@ -10,6 +10,7 @@
 #include "solidobject.h"
 #include "mapblock.h"
 #include "gamecube.h"
+#include "player.h"
 
 using namespace Sifteo;
 
@@ -34,6 +35,8 @@ public:
 	void draw();
     void doPhysics();
 	void cleanup();
+	
+	Player plyr;
 	
 private:
 	GameCube cube_0, cube_1, cube_2;
