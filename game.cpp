@@ -49,6 +49,9 @@ void Game::doPhysics() {
 	}
 
 	plyr.doPhysics();
+	
+	Events::neighborAdd.set(&Game::attachCube, this);
+	Events::neighborRemove.set(&Game::detachCube, this);
 }
 void Game::run(){
 
@@ -69,9 +72,13 @@ void Game::run(){
 	}
 }
 
-void Game::attachCube(){}
+void Game::attachCube(unsigned cube1, unsigned cube2, unsigned side1, unsigned side2){
+	LOG("Perky");
+}
 
-void Game::detachCube(){}
+void Game::detachCube(unsigned cube1, unsigned cube2, unsigned side1, unsigned side2){
+	LOG("Nipples");
+}
 
 void Game::animate(float td){
 	
