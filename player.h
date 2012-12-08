@@ -30,6 +30,8 @@ private:
     BoundingBox boundingBox;
 	unsigned animIndex;
     bool dead = false;
+    
+    Int2 getNextPosition();
 };
 
 #endif
