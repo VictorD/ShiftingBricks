@@ -7,7 +7,7 @@
 #include "game.h" 
 
 Player::Player()
-	: position(vec(0,70)), onCube(0), boundingBox(position, vec(2,2)), animIndex(0) {}
+	: position(vec(0,30)), onCube(0), boundingBox(position, vec(2,2)), animIndex(0) {}
 
 void Player::init(GameCube *gc){
 	onCube = gc;
@@ -19,7 +19,7 @@ void Player::animate(float dt){
 
 void Player::draw(){
 	const auto &sprite = onCube->vid.sprites[1];
-	sprite.setImage(Atest, position.x % 4);
+	sprite.setImage(Hero, position.x % 4);
 }
 
 void Player::move() {
