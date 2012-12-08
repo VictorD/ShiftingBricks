@@ -16,10 +16,9 @@ static Metadata M = Metadata()
 void main() {
 	
 	static Game game;
-	
-	while(1){
-		game.title();
-		game.init();
-        game.run();
-	}
+
+    //game.title();
+    game.init();
+    game.run();
+    //TODO: game.gameOverScreen();
 }

@@ -6,12 +6,12 @@
 #include "game.h"
 
 void SolidObject::draw(VideoBuffer *vid) {
-    LOG("Base SolidObject Draw\n");
     vid->bg1.image(position, Grass);
 }
 
 void SolidObject::move() {
     position = vec(position.x + velocity.x, position.y + velocity.y + hasGravity());
+
     boundingBox.setPosition(position);
     if (BoundingBox::vectorLengthSquared(velocity) > 0)
         LOG("new position: %d, %d\n", position.x, position.y);
@@ -21,7 +21,11 @@ bool SolidObject::collidesWith(SolidObject *s2) {
     if (!hasGravity())
         return false;
 
-    return boundingBox.intersects(s2->getBoundingBox());
+    return collidesWith(s2->getBoundingBox());
+}
+
+bool SolidObject::collidesWith(BoundingBox b2) {
+    return boundingBox.intersects(b2);
 }
 
 void SolidObject::handleCollision(SolidObject *s2) {

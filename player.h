@@ -16,14 +16,20 @@ public:
 	void init(GameCube *gc);
 	void animate(float dt);
 	void draw();
+    void doPhysics();
+    void move();
 	bool isOnCube(GameCube *gc){
 		return onCube == gc;
 	}
+    
+    bool isDead() { return dead; }
 	
 private:
+    Int2 position;
 	GameCube *onCube;
-    SolidObject collisionBox;
+    BoundingBox boundingBox;
 	unsigned animIndex;
+    bool dead = false;
 };
 
 #endif

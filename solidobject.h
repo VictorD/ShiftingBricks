@@ -7,7 +7,7 @@ using namespace Sifteo;
 
 class SolidObject {
     public:
-        SolidObject(): boundingBox(BoundingBox(position, size)) {
+        SolidObject(): boundingBox(position, size) {
             position = vec(0,0);
             velocity = vec(0,0);
             size = vec(0,0);
@@ -15,7 +15,7 @@ class SolidObject {
         }
         
         SolidObject (Int2 position, Int2 velocity, bool hasGravity, int width, int height) :
-            position(position), velocity(velocity), boundingBox(BoundingBox(position, size)), gravity(hasGravity) {
+            position(position), velocity(velocity), boundingBox(position, size),  gravity(hasGravity) {
             size.x = width;
             size.y = height;
         }
@@ -31,6 +31,7 @@ class SolidObject {
         
         BoundingBox getBoundingBox() { return boundingBox; }
         bool collidesWith(SolidObject *s2);
+        bool collidesWith(BoundingBox b2);
         void handleCollision(SolidObject *s2);
 
     private:

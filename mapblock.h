@@ -5,6 +5,8 @@
 #include <sifteo/array.h>
 #include "solidobject.h"
 
+typedef Array<SolidObject, 8> SolidArray;
+
 class MapBlock {
     
     public:
@@ -15,10 +17,11 @@ class MapBlock {
         void init();
         void doPhysics();
         void draw(VideoBuffer* vid);
+        SolidArray getSolids() { return solids; }
         
     private:
         int current = 0;
-        Array<SolidObject, 8> solids;
+        SolidArray solids;
 };
 
 #endif

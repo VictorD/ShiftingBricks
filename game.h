@@ -21,7 +21,7 @@ using namespace Sifteo;
 /*		Game class		*/
 
 class BlockFactory{};
-
+    
 class Game{
 public:
 	Game();
@@ -35,9 +35,7 @@ public:
 	void draw();
     void doPhysics();
 	void cleanup();
-	
-	Player plyr;
-	
+
 private:
 	GameCube cube_0, cube_1, cube_2;
 	GameCube &getCube(unsigned i){
@@ -48,7 +46,8 @@ private:
 		case 2: return cube_2;
 		};
 	}
-	
+
+    Player plyr;
 };
 
 
