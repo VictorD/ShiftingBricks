@@ -15,7 +15,7 @@ void MapBlock::draw(VideoBuffer* vid) {
     SolidObject *start = solids.begin();
     for(int i = 0; i < solids.count(); i++) {
         SolidObject *s = start+i;
-        solidMask = solidMask | BG1Mask::filled(vec(s->getX(),s->getY()), vec(s->getWidth(), s->getHeight()));
+        solidMask = solidMask | BG1Mask::filled(s->getPosition(), s->getSize());
     }
     vid->bg1.setMask(solidMask);
 
@@ -37,8 +37,8 @@ void MapBlock::doPhysics() {
                 continue;
                 
             SolidObject *s2 = start+j;
-            if (s1->isAffectedByGravity() && s1->testCollision(s2)) {
-                s1->collidesWith(s2);
+            if (s1->hasGravity() && s1->collidesWith(s2)) {
+                s1->handleCollision(s2);
                 LOG("collision detected\n");
             }
         }
