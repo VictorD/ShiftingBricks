@@ -20,8 +20,15 @@ public:
     void doPhysics();
 	void getNewPattern();
 	
+	void setTransition(unsigned side);
+	void closeTransition(unsigned side);
+	bool getTransistion(unsigned side){ return Transitions[side]; };
+	
 	VideoBuffer vid;
     MapBlock scene;
+	
+private:
+	bool Transitions[4];
 };
 
 #endif

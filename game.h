@@ -30,8 +30,8 @@ public:
 	void init();
 	void run();
 	void animate(float td);
-	void attachCube(unsigned cube1, unsigned cube2, unsigned side1, unsigned side2);
-	void detachCube(unsigned cube1, unsigned cube2, unsigned side1, unsigned side2);
+	void attachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned side2);
+	void detachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned side2);
 	void draw();
     void doPhysics();
 	void cleanup();

@@ -10,6 +10,7 @@
 GameCube::GameCube(CubeID cube)
 {
 	vid.attach(cube);
+	bool Transitions[] = {0,0,0,0};
 }
 
 void GameCube::init(){
@@ -29,6 +30,16 @@ void GameCube::animate(){
 
 void GameCube::doPhysics() {
    scene.doPhysics();
+}
+
+void GameCube::setTransition(unsigned side){
+	Transitions[side] = 1;
+	LOG("Side: %d \n", Transitions[side]);
+}
+
+void GameCube::closeTransition(unsigned side){
+	Transitions[side] = 0;
+	LOG("Side: %d \n", Transitions[side]);
 }
 
 void GameCube::getNewPattern(){}

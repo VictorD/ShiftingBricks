@@ -72,12 +72,23 @@ void Game::run(){
 	}
 }
 
-void Game::attachCube(unsigned cube1, unsigned cube2, unsigned side1, unsigned side2){
-	LOG("Perky");
+void Game::attachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned side2){
+	
+	GameCube &gc1 = getCube(cube1);
+	GameCube &gc2 = getCube(cube2);
+	
+	gc1.setTransition(side1);
+	gc2.setTransition(side2);
+	
 }
 
-void Game::detachCube(unsigned cube1, unsigned cube2, unsigned side1, unsigned side2){
-	LOG("Nipples");
+void Game::detachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned side2){
+
+	GameCube &gc1 = getCube(cube1);
+	GameCube &gc2 = getCube(cube2);
+	
+	gc1.closeTransition(side1);
+	gc2.closeTransition(side2);
 }
 
 void Game::animate(float td){
@@ -96,4 +107,7 @@ void Game::draw(){
 	plyr.draw();
 }
 
-void Game::cleanup(){}
+void Game::cleanup(){
+	Events::neighborAdd.unset();
+	Events::neighborRemove.unset();
+}
