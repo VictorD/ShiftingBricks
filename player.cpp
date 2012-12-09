@@ -19,6 +19,7 @@ void Player::animate(float dt){
 
 void Player::draw(){
 	const auto &sprite = onCube->vid.sprites[1];
+	sprite.move(position.x, position.y);
 	sprite.setImage(Hero, (position.x/2) % 4);
 }
 
@@ -73,7 +74,4 @@ void Player::doPhysics() {
     }    
     
     move(nextPosition);
-       
-    const auto &sprite = onCube->vid.sprites[1];
-    sprite.move(position.x, position.y);
 }
