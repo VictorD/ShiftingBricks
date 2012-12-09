@@ -21,7 +21,7 @@ void GameCube::init(){
 void GameCube::draw(){
     vid.initMode(BG0_SPR_BG1);
     bgPosition.x++;
-    if (bgPosition.x > 128)
+    if (bgPosition.x > 144)
         bgPosition.x = 0;
         
     vid.bg0.setPanning(bgPosition);
