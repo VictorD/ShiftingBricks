@@ -20,15 +20,19 @@ public:
     void doPhysics();
 	void getNewPattern();
 	
-	void setTransition(unsigned side);
+	void setTransition(unsigned side, GameCube* gc);
 	void closeTransition(unsigned side);
-	bool getTransistion(unsigned side){ return Transitions[side]; };
+	
+	GameCube* getTop(){ return Transitions[0]; };
+	GameCube* getLeft(){ return Transitions[1]; };
+	GameCube* getBottom(){ return Transitions[2]; };
+	GameCube* getRight(){ return Transitions[3]; };
 	
 	VideoBuffer vid;
     MapBlock scene;
 	
 private:
-	bool Transitions[4];
+	GameCube* Transitions[4];
 };
 
 #endif

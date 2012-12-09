@@ -31,15 +31,18 @@ void Game::title(){
 void Game::init(){  
     getCube(0).scene.addObject(SolidObject(vec(4,3), vec(0,0), true, 4,2));
     getCube(0).scene.addObject(SolidObject(vec(6,0), vec(0,0), true, 4,2));
-    getCube(0).scene.addObject(SolidObject(vec(0,11), vec(0,0), false, 16,4));
-    getCube(1).scene.addObject(SolidObject(vec(0,11), vec(0,0), false, 11,4));
-    getCube(2).scene.addObject(SolidObject(vec(0,11), vec(0,0), false, 11,4));
+    getCube(0).scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 16,4));
+    getCube(1).scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 3,4));
+    getCube(2).scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 11,4));
     
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();
 	}
 	
 	plyr.init(&getCube(0));
+	
+	Events::neighborAdd.set(&Game::attachCube, this);
+	Events::neighborRemove.set(&Game::detachCube, this);
 	
 }
 
@@ -49,9 +52,6 @@ void Game::doPhysics() {
 	}
 
 	plyr.doPhysics();
-	
-	Events::neighborAdd.set(&Game::attachCube, this);
-	Events::neighborRemove.set(&Game::detachCube, this);
 }
 void Game::run(){
 
@@ -77,8 +77,8 @@ void Game::attachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned s
 	GameCube &gc1 = getCube(cube1);
 	GameCube &gc2 = getCube(cube2);
 	
-	gc1.setTransition(side1);
-	gc2.setTransition(side2);
+	gc1.setTransition(side1, &gc2);
+	gc2.setTransition(side2, &gc1);
 	
 }
 

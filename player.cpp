@@ -7,7 +7,7 @@
 #include "game.h" 
 
 Player::Player()
-	: position(vec(0,30)), onCube(0), boundingBox(position, vec(2,4)), animIndex(0) {}
+	: position(vec(0,50)), onCube(0), boundingBox(position, vec(2,4)), animIndex(0) {}
 
 void Player::init(GameCube *gc){
 	onCube = gc;
@@ -28,13 +28,25 @@ void Player::move(Int2 pos) {
 
 Int2 Player::getNextPosition() {
    if(position.x > 127) {
-       onCube = onCube+1;
-       position = vec(0, position.y);
+		// Check that right cube is connected, and check if the right cubes left side is the current cube
+		if(onCube->getRight() != NULL && onCube->getRight()->getLeft() == onCube){
+			onCube = onCube->getRight();
+			position = vec(0, position.y);
+		}
+		else{
+			dead = true;
+		}
    }
         
-   if (position.y > 127) {
-       LOG("y: %d\n", position.y);
-       dead = true;
+   if (position.y > 127) {	
+      LOG("y: %d\n", position.y);
+	  if(onCube->getBottom() != NULL && onCube->getBottom()->getTop() == onCube){
+	     onCube = onCube->getBottom();
+		 position = vec(position.x, 0);
+	  }
+	  else{
+	     dead = true;
+	  }
    }
     
    int xpos = position.x + 2;
