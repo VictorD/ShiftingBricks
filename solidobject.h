@@ -7,7 +7,7 @@ using namespace Sifteo;
 
 class SolidObject {
     public:
-        SolidObject(): boundingBox(position, size) {
+        SolidObject(): boundingBox(position, vec(8*size.x, 8*size.y)) {
             position = vec(0,0);
             velocity = vec(0,0);
             size = vec(0,0);
@@ -15,7 +15,7 @@ class SolidObject {
         }
         
         SolidObject (Int2 position, Int2 velocity, bool hasGravity, int width, int height) :
-            position(position), velocity(velocity), boundingBox(position, size),  gravity(hasGravity) {
+            position(position), velocity(velocity), boundingBox(vec(8*position.x, 8*position.y), vec(8*size.x, 8*size.y)),  gravity(hasGravity) {
             size.x = width;
             size.y = height;
         }

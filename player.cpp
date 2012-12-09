@@ -19,11 +19,11 @@ void Player::animate(float dt){
 
 void Player::draw(){
 	const auto &sprite = onCube->vid.sprites[1];
-	sprite.setImage(Hero, position.x % 4);
+	sprite.setImage(Hero, (position.x/2) % 4);
 }
 
-void Player::move() {
-    position = getNextPosition();
+void Player::move(Int2 pos) {
+    position = pos;
 }
 
 Int2 Player::getNextPosition() {
@@ -37,17 +37,15 @@ Int2 Player::getNextPosition() {
        dead = true;
    }
     
-   int xpos = position.x + 1;
+   int xpos = position.x + 2;
    int ypos = position.y + 2;
    return vec(xpos, ypos);
 }
 
 void Player::doPhysics() {
     Int2 nextPosition = getNextPosition();
-    Int2 boxPosition = vec(nextPosition.x/8, nextPosition.y/8);
-    boundingBox = BoundingBox(boxPosition, vec(2,4));
+    boundingBox = BoundingBox(nextPosition, vec(12,30));
 
-    bool touchingGround = false;
     // Test for collisions with scene solids
 	SolidArray sceneSolids = onCube->scene.getSolids();
     SolidObject *start = sceneSolids.begin();
@@ -56,19 +54,13 @@ void Player::doPhysics() {
         BoundingBox solidBox = solid->getBoundingBox();
         Int2 intersection = solidBox.getIntersection(boundingBox);
         
-        //LOG("bb %d, %d\n", boundingBox.getPosition().x, boundingBox.getPosition().y);
-        //LOG("sb %d, %d\n", solidBox.getPosition().x, solidBox.getPosition().y);
-        //LOG("intersection %d, %d\n", intersection.x, intersection.y);
-        
-        if (BoundingBox::vectorLengthSquared(intersection) > 0) {
-            touchingGround = true;
-            position = vec(nextPosition.x, position.y - intersection.y);
+        if (BoundingBox::vectorLengthSquared(intersection) > 1) {
+            nextPosition = vec(nextPosition.x-1, nextPosition.y-3);
             LOG("player collision detected, %d\n", intersection.y);
         }
     }    
-
-    if (!touchingGround)
-        move();
+    
+    move(nextPosition);
        
     const auto &sprite = onCube->vid.sprites[1];
     sprite.move(position.x, position.y);

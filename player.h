@@ -17,7 +17,7 @@ public:
 	void animate(float dt);
 	void draw();
     void doPhysics();
-    void move();
+    void move(Int2 pos);
 	bool isOnCube(GameCube *gc){
 		return onCube == gc;
 	}

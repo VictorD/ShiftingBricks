@@ -11,8 +11,8 @@ void SolidObject::draw(VideoBuffer *vid) {
 
 void SolidObject::move() {
     position = vec(position.x + velocity.x, position.y + velocity.y + hasGravity());
-
-    boundingBox.setPosition(position);
+    boundingBox.setPosition(vec(8*position.x, 8*position.y));
+    
     if (BoundingBox::vectorLengthSquared(velocity) > 0)
         LOG("new position: %d, %d\n", position.x, position.y);
 }
