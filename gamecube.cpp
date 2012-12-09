@@ -15,11 +15,16 @@ GameCube::GameCube(CubeID cube)
 
 void GameCube::init(){
 	vid.initMode(BG0);
-    vid.bg0.image(vec(0,0), Background);	
+    vid.bg0.image(vec(0,0), Background);
 }
 
 void GameCube::draw(){
     vid.initMode(BG0_SPR_BG1);
+    bgPosition.x++;
+    if (bgPosition.x > 128)
+        bgPosition.x = 0;
+        
+    vid.bg0.setPanning(bgPosition);
 	vid.bg0.image(vec(0,0), Background); 
     scene.draw(&vid);
 }

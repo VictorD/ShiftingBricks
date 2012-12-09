@@ -33,6 +33,7 @@ public:
 	
 private:
 	GameCube* Transitions[4];
+    Int2 bgPosition;
 };
 
 #endif
