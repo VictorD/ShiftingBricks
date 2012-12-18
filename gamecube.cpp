@@ -8,7 +8,8 @@
 /*		Shamelessly stolen from example/membrane to init cubes	 */
 
 GameCube::GameCube(CubeID cube)
-{
+{	
+	id = cube;
 	vid.attach(cube);
 	GameCube* Transitions[] = {NULL,NULL,NULL,NULL};
 }
@@ -16,6 +17,7 @@ GameCube::GameCube(CubeID cube)
 void GameCube::init(){
 	vid.initMode(BG0);
     vid.bg0.image(vec(0,0), Background);
+	getNewPattern(id);
 }
 
 void GameCube::draw(){
@@ -45,4 +47,9 @@ void GameCube::closeTransition(unsigned side){
 	Transitions[side] = NULL;
 }
 
-void GameCube::getNewPattern(){}
+void GameCube::getNewPattern(int option){
+	if (option == 0) 
+		scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 16,4));
+	else
+		scene.generate();
+}

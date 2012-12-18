@@ -28,13 +28,7 @@ void Game::title(){
 }
 
 
-void Game::init(){  
-    //getCube(0).scene.addObject(SolidObject(vec(4,3), vec(0,0), true, 4,2));
-    //getCube(0).scene.addObject(SolidObject(vec(6,0), vec(0,0), true, 4,2));
-    getCube(0).scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 16,4));
-    getCube(1).scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 16,4));
-    getCube(2).scene.addObject(SolidObject(vec(0,12), vec(0,0), false, 16,4));
-    
+void Game::init(){     
 	for(unsigned i = 0; i < NUM_CUBES; i++){
 		getCube(i).init();
 	}

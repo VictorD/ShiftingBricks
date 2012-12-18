@@ -26,6 +26,7 @@ public:
 	
 private:
     Int2 position;
+	Int2 velocity;
 	GameCube *onCube;
     BoundingBox boundingBox;
 	unsigned animIndex;

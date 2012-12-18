@@ -17,8 +17,9 @@ void main() {
 	
 	static Game game;
 
-    //game.title();
+    game.title();
     game.init();
     game.run();
+	game.cleanup();
     //TODO: game.gameOverScreen();
 }

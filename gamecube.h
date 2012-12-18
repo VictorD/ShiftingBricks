@@ -18,7 +18,7 @@ public:
 	void draw();
 	void animate();
     void doPhysics();
-	void getNewPattern();
+	void getNewPattern(int id);
 	
 	void setTransition(unsigned side, GameCube* gc);
 	void closeTransition(unsigned side);
@@ -32,6 +32,7 @@ public:
     MapBlock scene;
 	
 private:
+	CubeID id;
 	GameCube* Transitions[4];
     Int2 bgPosition;
 };

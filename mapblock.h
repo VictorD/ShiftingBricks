@@ -16,12 +16,14 @@ class MapBlock {
 
         void init();
         void doPhysics();
+		void generate();
         void draw(VideoBuffer* vid);
         SolidArray getSolids() { return solids; }
         
     private:
         int current = 0;
         SolidArray solids;
+		static Random random;
 };
 
 #endif
