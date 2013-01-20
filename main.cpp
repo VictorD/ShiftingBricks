@@ -13,6 +13,7 @@ static Metadata M = Metadata()
     .icon(Icon)
     .cubeRange(NUM_CUBES);
 
+/* Structure of main comes from examples/Membrane provided with SDK */
 void main() {
 	
 	static Game game;

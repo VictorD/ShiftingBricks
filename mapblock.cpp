@@ -1,5 +1,11 @@
 /*  
 	ShiftingBricks:	MapBlock class file
+
+	This class is responsible for keeping track of the objects 
+	of a scene in the game. A scene in this case is the part 
+	of a 	world contained that fits within the area of one 
+	cube.
+
 */
 
 #include <sifteo.h>
@@ -8,9 +14,8 @@
 
 Random MapBlock::random;
 
-
 /* 
- * Draw the collidables that exist in this mapblock.
+ * draw(vid): Draw the collidable objects that exist in this mapblock to the vid videobuffer.
  */ 
 void MapBlock::draw(VideoBuffer* vid) {
     BG1Mask solidMask = BG1Mask::empty();
@@ -29,7 +34,10 @@ void MapBlock::draw(VideoBuffer* vid) {
 }
 
 
-
+/* 
+	generate(): Generate terrain for this map block from a list of 7 pre-
+	defined options.
+ */
 void MapBlock::generate() {
 	solids.clear();
 
@@ -78,6 +86,11 @@ void MapBlock::generate() {
 	}
 }
 
+
+/* 
+Perform a collision check between the collidable objects currently in this mapblock. Note that blocks can collide not only with the player object but also with each other, which is important for moving blocks that are affected by gravity.
+
+ */
 void MapBlock::doPhysics() {
     SolidObject *start = solids.begin();
     for(int i = 0; i < solids.count(); i++) {
