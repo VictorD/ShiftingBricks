@@ -81,7 +81,7 @@ void Game::run(){
 
 
 /*
-*	Function to tell two cubes are attached when they connect to eachother in real life
+	Makes a event for when cubes touch sides
 */
 
 void Game::attachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned side2){
@@ -94,7 +94,7 @@ void Game::attachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned s
 
 
 /*
-*	Function to tell two cubes are detached when they no longer connect to eachother in real life
+	Makes disconnecting cubes a event
 */
 void Game::detachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned side2){
 	GameCube &gc1 = getCube(cube1);
@@ -106,7 +106,7 @@ void Game::detachCube(unsigned cube1, unsigned side1, unsigned cube2, unsigned s
 
 
 /*
-*	Sets animation for all cubes
+	Changes animation to next tile
 */
 void Game::animate(float td){
 	for(unsigned i = 0; i < NUM_CUBES; i++){
@@ -116,7 +116,7 @@ void Game::animate(float td){
 
 
 /*
-*	Visually draws for all cubes and player
+	 Calls draw function for all the cube objects as well as the player object
 */
 void Game::draw(){
     
@@ -129,7 +129,7 @@ void Game::draw(){
 
 
 /*
-*	Removes all objects
+*	Removes all event driven things
 */
 void Game::cleanup(){
 	Events::neighborAdd.unset();
